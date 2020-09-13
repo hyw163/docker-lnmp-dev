@@ -23,7 +23,7 @@
 * 获取代码，运行docker-compose：
 
 ```bash
-git clone git@github.com:zfuming/docker-php-dev.git
+git clone git@github.com:hyw163/docker-lnmp-dev.git
 cd run/
 docker-compose up -d
 ```
