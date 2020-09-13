@@ -28,13 +28,13 @@ cd run/
 docker-compose up -d
 ```
 
+### MAC下Docker容器使用xdebug
+
 * 添加网卡别名
 
 ```bash
 sudo -S ifconfig en0 alias 10.254.254.254 255.255.255.0
 ```
-
-### MAC下Docker容器使用xdebug
 
 * 工具组合
  + IDEA 或者 phpstorm
