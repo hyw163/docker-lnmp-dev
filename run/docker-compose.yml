@@ -6,7 +6,6 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ../app/web:/app/web
       - ./etc/nginx:/etc/nginx
       - ./etc/localtime:/etc/localtime
     network_mode: "bridge"
@@ -14,6 +13,8 @@ services:
       - php_fpm:php-fpm
     depends_on:
       - php_fpm
+    environment:
+      TZ: 'Asia/Shanghai'
   php_fpm:
     image: "heyw/php-xdebug:latest"
     volumes:
