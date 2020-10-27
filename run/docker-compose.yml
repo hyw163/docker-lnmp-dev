@@ -56,3 +56,13 @@ services:
       TZ: 'Asia/Shanghai'
       MYSQL_ROOT_PASSWORD: root
       MYSQL_ROOT_HOST: "%"
+  es:
+    image: "docker.elastic.co/elasticsearch/elasticsearch:7.5.2"
+    environment:
+      - "discovery.type=single-node"
+    volumes:
+      - ../data/es-data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    network_mode: "bridge"     
