@@ -30,6 +30,9 @@ services:
       - redis:redis
       - mysql:mysql
       - memcached:memcached
+#    重写环境变量
+    environment:
+      REDIS_PORT: 6379
   memcached:
     image: "memcached:latest"
     network_mode: "bridge"
